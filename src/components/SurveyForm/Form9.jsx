@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { CheckCircle, Plus, Check } from 'lucide-react';
-import { getAutocompletePredictions, getPlaceDetails } from '../../services/googleApi';
+import { getAutocompletePredictions, getPlaceDetails } from '@/services/googleApi';
 
 const StepNineForm = ({ formData = {}, onNext, onDataChange, onValidityChange }) => {
   const [selected, setSelected] = useState(formData.mailingAddressConfirm ?? null);

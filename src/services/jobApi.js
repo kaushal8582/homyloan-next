@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // API base URL - use environment variable or fallback to localhost:3000
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000';
+const API_BASE_URL =  'http://localhost:3001';
 const JOB_API_URL = `${API_BASE_URL}/api/jobs`;
 
 /**

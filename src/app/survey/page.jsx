@@ -1,5 +1,10 @@
+import { Suspense } from "react";
 import Page from "@/pages/SurveyForm";
 
 export default function RoutePage() {
-  return <Page />;
+  return (
+    <Suspense fallback={null}>
+      <Page />
+    </Suspense>
+  );
 }

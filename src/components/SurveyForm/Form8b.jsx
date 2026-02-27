@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import WhyAskedDisclosure from './WhyAskedDisclosure';
-import { getAutocompletePredictions, getPlaceDetails } from '../../services/googleApi';
+import { getAutocompletePredictions, getPlaceDetails } from '@/services/googleApi';
 
 const AddressFormStep = ({ formData = {}, onNext, onDataChange, onValidityChange, stepNumber }) => {
   const [address, setAddress] = useState({

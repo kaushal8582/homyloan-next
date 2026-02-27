@@ -6,7 +6,7 @@ import Footer from "../Components/Footer";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useSearchParams, useRouter } from "next/navigation";
 import SurveyChatbot from "../Components/SurveyForm/SurveyChatbot";
-import { submitSurvey } from "../services/surveyApi";
+import { submitSurvey } from "@/services/surveyApi";
 
 // Saare Forms Import
 import JourneyForm from "../Components/SurveyForm/Form1";
@@ -49,7 +49,7 @@ const SurveyForm = () => {
 
   // Pre-fill zip code from URL parameter
   useEffect(() => {
-    const zipCodeFromUrl = searchParams.get("zipCode");
+    const zipCodeFromUrl = searchParams?.get?.("zipCode");
     if (zipCodeFromUrl) {
       // Validate and set zip code in formData (5 or 6 digits)
       const cleanedZip = zipCodeFromUrl.replace(/[\s-]/g, '');

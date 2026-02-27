@@ -12,11 +12,14 @@ const videos = [
 ];
 
 export const useHeroVideo = () => {
-  const [selectedVideo] = useState(() => {
-    const randomIndex = Math.floor(Math.random() * videos.length);
-    return videos[randomIndex];
-  });
+  // Use fixed initial value so server and client match (avoids hydration error)
+  const [selectedVideo, setSelectedVideo] = useState(videos[0]);
   const videoRef = useRef(null);
+
+  useEffect(() => {
+    // Pick random video only on client after mount
+    setSelectedVideo(videos[Math.floor(Math.random() * videos.length)]);
+  }, []);
 
   useEffect(() => {
     if (videoRef.current) {
@@ -24,7 +27,7 @@ export const useHeroVideo = () => {
         console.log("Video autoplay failed:", error);
       });
     }
-  }, []);
+  }, [selectedVideo]);
 
   return { videoRef, selectedVideo };
 };

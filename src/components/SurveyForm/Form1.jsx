@@ -1,12 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Search, FileEdit, Home, Check } from 'lucide-react';
 
 const JourneyForm = ({ formData = {}, onNext, onDataChange }) => {
   const [selected, setSelected] = useState(formData.journey ?? null);
+  const [iconSize, setIconSize] = useState(28);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (onDataChange) onDataChange({ ...formData, journey: selected });
   }, [selected]);
+
+  useEffect(() => {
+    const updateSize = () => setIconSize(window.innerWidth < 640 ? 20 : 28);
+    updateSize();
+    window.addEventListener('resize', updateSize);
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
 
   const options = [
     {
@@ -58,7 +66,7 @@ const JourneyForm = ({ formData = {}, onNext, onDataChange }) => {
           >
             {/* Icon Container - Responsive scale */}
             <div className="flex-shrink-0 w-[44px] h-[44px] sm:w-[56px] sm:h-[56px] bg-[#F3F4F6] rounded-full flex items-center justify-center">
-              {React.cloneElement(option.icon, { size: window?.innerWidth < 640 ? 20 : 28 })}
+              {React.cloneElement(option.icon, { size: iconSize })}
             </div>
 
             {/* Title - Truncate long text on small mobile screens if needed */}
