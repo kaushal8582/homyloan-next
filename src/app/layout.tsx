@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
-  title: "homy-loan",
-  description: "HomyLoan website",
+  title: "HomyLoan - Your Trusted Mortgage Partner",
+  description: "HomyLoan offers comprehensive mortgage solutions including purchase loans, refinancing, VA loans, FHA loans, and more. Get expert guidance for your home financing needs.",
+  keywords: "mortgage, home loans, refinance, VA loans, FHA loans, mortgage calculator, home financing",
+  openGraph: {
+    title: "HomyLoan - Your Trusted Mortgage Partner",
+    description: "HomyLoan offers comprehensive mortgage solutions including purchase loans, refinancing, VA loans, FHA loans, and more.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -15,12 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased bg-[#050505]">
-        <div className="mx-auto">
-          <Navbar />
+      <body className="mx-auto">
+        <ScrollToTop />
           {children}
-          <Footer />
-        </div>
       </body>
     </html>
   );
