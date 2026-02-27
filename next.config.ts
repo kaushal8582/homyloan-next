@@ -6,6 +6,8 @@ const nextConfig: NextConfig = {
   images: {
     domains: ['api.homyloan.com'],
     unoptimized: false,
+    // Allow local image imports from assets
+    remotePatterns: [],
   },
   // Fix for workspace root warning
   outputFileTracingRoot: path.join(__dirname),

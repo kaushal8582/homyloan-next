@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Jumboboard from "../assets/jumboboard.svg";
 import Button from "../UI/Button";
 import { useRouter } from "next/navigation";
@@ -34,7 +35,7 @@ export default function Jumbo_Loans({ content }) {
           </div>
         </div>
         <div className="relative w-full sm:w-[80%] lg:w-[560px] h-64 sm:h-80 md:h-96 lg:h-[560px] lg:mt-[100px] rounded-3xl sm:rounded-[45px] lg:rounded-[60px] overflow-hidden">
-          <img src={imgSrc} className="w-full h-full object-cover" alt="Jumbo Loans" />
+          <Image src={imgSrc} fill className="object-cover" alt="Jumbo Loans" />
         </div>
       </section>
     </div>

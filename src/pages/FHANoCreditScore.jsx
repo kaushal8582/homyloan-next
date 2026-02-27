@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 import { getPageContent } from "../services/pageContentApi";
 import Navbar from "../Components/Navbar";

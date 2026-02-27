@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import dollarImg from "../assets/dollar-square.svg";
 
 /* ---------------- SHARED FIELD COMPONENTS (NEW DESIGN) ---------------- */
@@ -302,10 +303,12 @@ export function FieldButtons({ label, placeholder, className = "" }) {
         />
 
         <div className="absolute right-2 top-1/2 -translate-y-1/2 flex gap-1.5 sm:gap-2  px-1.5 sm:px-2 py-1">
-          <button className="w-[32px] h-[30px] sm:w-[36px] sm:h-[33px] bg-black rounded-[8px] sm:rounded-[10px] flex justify-center items-center">
-            <img
+          <button className="w-[32px] h-[30px] sm:w-[36px] sm:h-[33px] bg-black rounded-[8px] sm:rounded-[10px] flex justify-center items-center relative">
+            <Image
               src={dollarImg}
-              className="w-[12px] h-[12px] sm:w-[14px] sm:h-[14px] object-contain"
+              width={14}
+              height={14}
+              className="object-contain"
               alt="dollar"
             />
           </button>

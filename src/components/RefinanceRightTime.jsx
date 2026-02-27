@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import home7 from "../assets/home7.jpg";
 import Button from "../UI/Button";
 import { useRouter } from "next/navigation";
@@ -28,8 +29,8 @@ export default function RefinanceRightTime({ content }) {
         ))}
       </h1>
       <p className="text-[#101011] font-medium text-[18px] leading-[100%] text-center max-w-[850px] mt-6">{rt.subText}</p>
-      <div className="mt-12">
-        <img src={imgSrc} alt="Home" className="w-[1030px] h-[464px] object-cover rounded-[70px] shadow-sm max-w-full" />
+      <div className="mt-12 relative w-full max-w-[1030px] h-[464px] rounded-[70px] shadow-sm overflow-hidden">
+        <Image src={imgSrc} fill alt="Home" className="object-cover" />
       </div>
       <p className="text-[#101011] font-medium text-[18px] leading-[100%] text-center max-w-[1000px] mt-10">{rt.bodyText}</p>
       <Button onClick={() => router.push("/applynow")} label={rt.ctaLabel} bgColor="#FF6B6B" dotColor="#1a1a1a" />

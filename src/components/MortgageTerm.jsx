@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Image from "next/image";
 import Button from "../UI/Button";
 import home6 from "../assets/home6.svg";
 import computer from "../assets/computer.svg";
@@ -24,7 +24,7 @@ export default function MortgageTerm({ content }) {
 
         {/* RIGHT SIDE IMAGE */}
         <div className="relative w-full sm:w-[80%] lg:w-[560px] h-64 sm:h-80 md:h-96 lg:h-[560px] lg:mt-[100px] rounded-3xl sm:rounded-[45px] lg:rounded-[60px] overflow-hidden">
-          <img src={image} className="w-full h-full object-cover" alt="Mortgage Terms" />
+          <Image src={image} fill className="object-cover" alt="Mortgage Terms" />
         </div>
       </section>
     </>

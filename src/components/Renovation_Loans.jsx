@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Renovationdocuments from "../assets/Renovationdocuments.svg";
 import Button from "../UI/Button";
@@ -35,7 +36,7 @@ export default function Renovation_Loans({ content }) {
           </div>
         </div>
         <div className="relative w-full sm:w-[80%] lg:w-[500px] xl:w-[560px] h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[560px] mt-0 lg:mt-[80px] rounded-3xl sm:rounded-[40px] lg:rounded-[60px] overflow-hidden flex-shrink-0">
-          <img src={imgSrc} className="w-full h-full object-cover" alt="Renovation Loans" />
+          <Image src={imgSrc} fill className="object-cover" alt="Renovation Loans" />
         </div>
       </section>
     </>

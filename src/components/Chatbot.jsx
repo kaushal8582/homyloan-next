@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Mic, Send } from "lucide-react";
 import axios from "axios";
@@ -314,11 +315,12 @@ const Chatbot = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8 mb-6 sm:mb-8 md:mb-12">
-          <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 xl:w-48 xl:h-48 flex items-center justify-center flex-shrink-0">
-            <img
+          <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 xl:w-48 xl:h-48 flex items-center justify-center flex-shrink-0 relative">
+            <Image
               src={HomyGif}
               alt="Homy assistant"
-              className="w-full h-full object-contain select-none"
+              fill
+              className="object-contain select-none"
             />
           </div>
           <div className="text-center md:text-left px-2 sm:px-0">

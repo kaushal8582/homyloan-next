@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Button from "../UI/Button";
 import computer from "../assets/computer.svg";
@@ -22,10 +23,11 @@ const OnlinePayment = ({ content }) => {
     <section className="w-full flex flex-col lg:flex-row items-center justify-start px-4 sm:px-6 md:px-12 lg:px-20 mt-16 sm:mt-20 lg:mt-28 mb-8 sm:mb-10 lg:mb-12 gap-8 lg:gap-0">
       {/* LEFT IMAGE */}
       <div className="w-full sm:w-[90%] lg:w-[585px] h-80 sm:h-96 md:h-[480px] lg:h-[601px] rounded-3xl sm:rounded-[45px] lg:rounded-[60px] flex items-center justify-center p-8 sm:p-10 lg:p-0">
-        <div className="w-full h-full rounded-2xl sm:rounded-[35px] lg:rounded-[45px] overflow-hidden">
-          <img
+        <div className="w-full h-full rounded-2xl sm:rounded-[35px] lg:rounded-[45px] overflow-hidden relative">
+          <Image
             src={image}
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
             alt="Online Payment"
           />
         </div>

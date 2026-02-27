@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import homyloan from "../assets/homyloan.png";
 import consumerAccess from "../assets/consumerAccess.png";
 import housingOpportunity from "../assets/housingopportunity.png";
@@ -14,20 +17,20 @@ export default function Footer() {
       <div className="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-6">
         {/* LEFT SIDE */}
         <div>
-          <img src={homyloan} alt="HomyLoan Logo" className="w-[180px] mb-6" />
+          <Image src={homyloan} alt="HomyLoan Logo" width={180} height={60} className="mb-6" />
           <p className="text-[16px] font-medium leading-[1]">info@homyloan.com</p>
           <p className="text-[16px] font-medium leading-[1] mt-1">+1 (214) 494-9492</p>
 
           {/* SOCIAL ICONS */}
           <div className="flex items-center gap-4 mt-6">
             <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="w-[35px] h-[35px] rounded-full border border-[#7C7C7C] flex items-center justify-center hover:bg-white/10 transition-all">
-              <img src={linkedicon} alt="linkedin" />
+              <Image src={linkedicon} alt="linkedin" width={20} height={20} />
             </a>
             <a href="https://facebook.com" target="_blank" rel="noreferrer" className="w-[35px] h-[35px] rounded-full border border-[#7C7C7C] flex items-center justify-center hover:bg-white/10 transition-all">
-              <img src={facebookicon} alt="facebook" />
+              <Image src={facebookicon} alt="facebook" width={20} height={20} />
             </a>
             <a href="https://twitter.com" target="_blank" rel="noreferrer" className="w-[35px] h-[35px] rounded-full border border-[#7C7C7C] flex items-center justify-center hover:bg-white/10 transition-all">
-              <img src={twittericon} alt="twitter" />
+              <Image src={twittericon} alt="twitter" width={20} height={20} />
             </a>
           </div>
         </div>
@@ -85,8 +88,8 @@ export default function Footer() {
 
       {/* LOGOS */}
       <div className="flex items-center justify-center gap-10 mb-10">
-        <img src={housingOpportunity} alt="Housing Opportunity" className="w-[65px]" />
-        <img src={consumerAccess} alt="Consumer Access" className="w-[65px]" />
+        <Image src={housingOpportunity} alt="Housing Opportunity" width={65} height={65} />
+        <Image src={consumerAccess} alt="Consumer Access" width={65} height={65} />
       </div>
 
       {/* LINKS */}

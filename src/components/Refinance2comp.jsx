@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import home6 from "../assets/home6.svg";
 import computer from "../assets/computer.svg";
 import Button from "../UI/Button";
@@ -52,13 +53,13 @@ const Refinance2comp = ({ content }) => {
           </div>
         </div>
         <div className="relative w-full sm:w-[80%] lg:w-[560px] h-64 sm:h-80 md:h-96 lg:h-[560px] lg:mt-[100px] rounded-3xl sm:rounded-[45px] lg:rounded-[60px] overflow-hidden">
-          <img src={heroImgSrc} className="w-full h-full object-cover" alt="" />
+          <Image src={heroImgSrc} fill className="object-cover" alt="" />
         </div>
       </section>
       <section className="max-w-[1480px] mx-auto w-full flex flex-col lg:flex-row items-center justify-start px-4 sm:px-8 lg:px-20 mt-28 sm:mt-32 lg:mt-44 gap-8 lg:gap-0 py-10 lg:py-0">
         <div className="w-full sm:w-[90%] lg:w-[585px] h-80 sm:h-96 md:h-[450px] lg:h-[601px] bg-[#F5F5F5] rounded-3xl sm:rounded-[45px] lg:rounded-[60px] flex items-center justify-center p-6 sm:p-8 lg:p-0 order-2 lg:order-1">
-          <div className="w-full h-full sm:w-[85%] sm:h-[85%] lg:w-[480px] lg:h-[480px] rounded-3xl sm:rounded-[40px] lg:rounded-[45px] overflow-hidden flex items-center justify-center">
-            <img src={whatIsImgSrc} className="w-full h-full object-cover" alt="Refinancing" />
+          <div className="w-full h-full sm:w-[85%] sm:h-[85%] lg:w-[480px] lg:h-[480px] rounded-3xl sm:rounded-[40px] lg:rounded-[45px] overflow-hidden flex items-center justify-center relative">
+            <Image src={whatIsImgSrc} fill className="object-cover" alt="Refinancing" />
           </div>
         </div>
         <div className="w-full lg:max-w-[550px] mb-0 lg:mb-20 lg:ml-20 order-1 lg:order-2 text-center lg:text-left">

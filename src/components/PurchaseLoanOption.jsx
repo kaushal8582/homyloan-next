@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import FHAloans from "../assets/FHAloans.jpg";
 import VAloan from "../assets/VAloans.jpg";
 import Conventionalloans from "../assets/conventionalloans.jpg";
@@ -51,7 +52,7 @@ export default function PurchaseLoanOption({ content }) {
       <div className="mt-8 sm:mt-10 lg:mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 sm:gap-5 lg:gap-6 w-full max-w-7xl px-4 sm:px-6 lg:px-6">
         {bigCard && (
           <div className="relative col-span-1 sm:col-span-2 lg:col-span-6 lg:row-span-2 h-64 sm:h-80 lg:h-[520px] rounded-2xl sm:rounded-3xl lg:rounded-[30px] overflow-hidden">
-            <img src={bigCard.image || defaultLoanOptions.cards[0].image} alt="" className="w-full h-full object-cover" />
+            <Image src={bigCard.image || defaultLoanOptions.cards[0].image} alt="" fill className="object-cover" />
             <div className="absolute inset-0 bg-black/30" />
             <button
               onClick={() => { const r = bigCard.route; router.push(typeof r === "string" ? r : "/fha-loan"); }}
@@ -72,7 +73,7 @@ export default function PurchaseLoanOption({ content }) {
             key={i}
             className="relative col-span-1 lg:col-span-3 h-56 sm:h-64 lg:h-[250px] rounded-2xl sm:rounded-3xl lg:rounded-[30px] overflow-hidden"
           >
-            <img src={card.image || defaultLoanOptions.cards[i + 1]?.image} alt="" className="w-full h-full object-cover" />
+            <Image src={card.image || defaultLoanOptions.cards[i + 1]?.image} alt="" fill className="object-cover" />
             <div className="absolute inset-0 bg-black/20" />
             <button
               onClick={() => { const r = card.route; if (typeof r === "string" && r !== "#") router.push(r); }}

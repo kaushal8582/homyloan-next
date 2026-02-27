@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import girlImage from "../assets/renvotationstylegirl.jpg";
 import interiorImage from "../assets/renvotationstyle.jpg";
@@ -63,18 +64,23 @@ export default function Renovation_Homestyle({ content }) {
       {/* RIGHT IMAGES */}
       <div className="relative z-10 flex gap-4 sm:gap-6 lg:gap-10 flex-shrink-0 justify-center lg:justify-start">
         {images.map((img) => (
-          <img
+          <div
             key={img}
-            src={img}
             onClick={() => onImageClick(img)}
             className="
-              w-32 h-40 sm:w-40 sm:h-48 md:w-48 md:h-60 lg:w-[260px] lg:h-[340px] 
-              rounded-xl sm:rounded-2xl lg:rounded-[25px] object-cover 
+              relative w-32 h-40 sm:w-40 sm:h-48 md:w-48 md:h-60 lg:w-[260px] lg:h-[340px] 
+              rounded-xl sm:rounded-2xl lg:rounded-[25px] 
               cursor-pointer hover:scale-105 transition-all duration-300
               shadow-[0_20px_40px_rgba(0,0,0,0.25)]
             "
-            alt="Renovation Style"
-          />
+          >
+            <Image
+              src={img}
+              fill
+              className="object-cover rounded-xl sm:rounded-2xl lg:rounded-[25px]"
+              alt="Renovation Style"
+            />
+          </div>
         ))}
       </div>
     </section>

@@ -24,10 +24,7 @@ const VA = ({ content }) => {
   const videos = VIDEO_PATHS;
   const hero = mergeWithDefaults(defaultHero, content?.hero);
   const videoUrl = hero.videoUrl && typeof hero.videoUrl === "string" && hero.videoUrl.trim() ? hero.videoUrl.trim() : null;
-  const [fallbackVideo] = useState(() => {
-    const randomIndex = Math.floor(Math.random() * videos.length);
-    return videos[randomIndex];
-  });
+  const [fallbackVideo] = useState(VIDEO_PATHS[0]);
   const videoSrc = videoUrl || fallbackVideo;
   const videoRef = useRef(null);
   useEffect(() => {

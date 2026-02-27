@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import familyImg from "../assets/familyImg.jpg";
 
@@ -57,7 +58,7 @@ const Mortgage = ({ content }) => {
 
                 {/* Hover Content */}
                 <div className="absolute inset-0 p-4 flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-all duration-500 overflow-hidden">
-                  <img src={familyImg} alt="Family" className="absolute inset-0 w-full h-full object-cover" />
+                  <Image src={familyImg} alt="Family" fill className="object-cover" />
                   <div className="absolute inset-0 bg-[#E6FF4BCC]"></div>
                   <div className="relative z-10">
                     <h3 className="font-semibold text-xs sm:text-sm">{card.title}</h3>
@@ -91,7 +92,7 @@ const Mortgage = ({ content }) => {
 
                   {/* Hover State */}
                   <div className="absolute inset-0 p-5 flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-all duration-500 overflow-hidden">
-                    <img src={familyImg} alt="Family" className="absolute inset-0 w-full h-full object-cover" />
+                    <Image src={familyImg} alt="Family" fill className="object-cover" />
                     <div className="absolute inset-0 bg-[#E6FF4BCC]"></div>
                     <div className="relative z-10">
                       <h3 className="font-semibold text-base">{card.title}</h3>
@@ -122,7 +123,7 @@ const Mortgage = ({ content }) => {
 
                   {/* Hover State */}
                   <div className="absolute inset-0 p-5 flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-all duration-500 overflow-hidden">
-                    <img src={familyImg} alt="Family" className="absolute inset-0 w-full h-full object-cover" />
+                    <Image src={familyImg} alt="Family" fill className="object-cover" />
                     <div className="absolute inset-0 bg-[#E6FF4BCC]"></div>
                     <div className="relative z-10">
                       <h3 className="font-semibold text-base">{card.title}</h3>

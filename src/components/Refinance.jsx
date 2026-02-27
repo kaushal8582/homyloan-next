@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import home6 from "../assets/home6.svg";
 import computer from "../assets/computer.svg";
 import Button from "../UI/Button";
@@ -45,13 +46,13 @@ export default function RefinanceSection({ content }) {
           </div>
         </div>
         <div className="relative w-full sm:w-[80%] lg:w-[560px] h-64 sm:h-80 md:h-96 lg:h-[560px] lg:mt-[100px] rounded-3xl sm:rounded-[45px] lg:rounded-[60px] overflow-hidden">
-          <img src={heroImg} className="w-full h-full object-cover" alt="" />
+          <Image src={heroImg} fill className="object-cover" alt="" />
         </div>
       </section>
       <section className="w-full flex flex-col lg:flex-row items-center justify-start px-4 sm:px-8 lg:px-20 mt-24 sm:mt-28 lg:mt-36 gap-8 lg:gap-0">
         <div className="w-full sm:w-[90%] lg:w-[585px] h-80 sm:h-96 md:h-[500px] lg:h-[601px] bg-[#F5F5F5] rounded-3xl sm:rounded-[45px] lg:rounded-[60px] flex items-center justify-center p-6 sm:p-8 lg:p-0 order-2 lg:order-1">
-          <div className="w-full h-full sm:w-[85%] sm:h-[85%] lg:w-[480px] lg:h-[480px] rounded-3xl sm:rounded-[40px] lg:rounded-[45px] overflow-hidden flex items-center justify-center">
-            <img src={whatIsImg} className="w-full h-full object-cover" alt="Refinancing" />
+          <div className="w-full h-full sm:w-[85%] sm:h-[85%] lg:w-[480px] lg:h-[480px] rounded-3xl sm:rounded-[40px] lg:rounded-[45px] overflow-hidden flex items-center justify-center relative">
+            <Image src={whatIsImg} fill className="object-cover" alt="Refinancing" />
           </div>
         </div>
         <div className="w-full lg:max-w-[550px] mb-0 lg:mb-20 lg:ml-20 order-1 lg:order-2 text-center lg:text-left">

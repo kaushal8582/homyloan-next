@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import { getAllPress } from "../services/pressApi";

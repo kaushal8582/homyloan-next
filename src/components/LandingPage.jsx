@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin"; // Import TextPlugin
+import Image from "next/image";
 import Button from "../UI/Button";
 import Logo from "../assets/logo.png";
 
@@ -50,12 +51,11 @@ const LandingPage = ({ content }) => {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  const videoSource = React.useMemo(() => {
-    if (content?.videoUrls?.length) {
-      return content.videoUrls[Math.floor(Math.random() * content.videoUrls.length)];
-    }
-    return LOCAL_VIDEOS[Math.floor(Math.random() * LOCAL_VIDEOS.length)];
-  }, [content?.videoUrls]);
+  // Deterministic video selection to avoid hydration mismatch
+  const videoSource =
+    (Array.isArray(content?.videoUrls)
+      ? content.videoUrls.map((u) => u && String(u).trim()).filter(Boolean)[0]
+      : null) || LOCAL_VIDEOS[0];
 
   const mainHeadingRef = useRef(null);
   const videoRef = useRef(null);
@@ -175,7 +175,7 @@ const LandingPage = ({ content }) => {
         </p>
 
         <h1 className="text-white mt-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-[clamp(1.1rem,5vw,2rem)] font-bold leading-tight uppercase text-center min-h-[3.5em] sm:min-h-[1.5em]">
-          <img src={logoUrl || Logo} alt="" height={30} width={230} className="w-[180px] sm:w-[260px] md:w-[200px] object-contain" />
+          <Image src={logoUrl || Logo} alt="" height={30} width={230} className="w-[180px] sm:w-[260px] md:w-[200px] object-contain" />
           <div className="inline-flex items-center">
             <span ref={typewriterTextRef} className="inline-block tracking-wide"></span>
             <span className="w-[3px] h-[1em] bg-white ml-1 animate-pulse"></span>

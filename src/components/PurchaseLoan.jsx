@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import home1 from "../assets/home1.jpg";
 import home2 from "../assets/home2.jpg";
 import home3 from "../assets/home3.jpg";
@@ -62,11 +63,12 @@ export default function PurchaseLoanHero({ content }) {
         {imageUrls.slice(0, 4).map((img, i) => (
           <div
             key={i}
-            className="w-full aspect-square overflow-hidden rounded-lg sm:rounded-xl"
+            className="w-full aspect-square overflow-hidden rounded-lg sm:rounded-xl relative"
           >
-            <img
+            <Image
               src={img}
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
               style={{ transform: "scale(1.2)" }}
               alt={`Home ${i + 1}`}
             />

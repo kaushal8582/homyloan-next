@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Mic, Send } from "lucide-react";
 import axios from "axios";
@@ -294,11 +295,12 @@ const SurveyChatbot = ({ currentStep = 1, onQuickSelect }) => {
 
   return (
     <>
-      <div className="w-[15rem] h-[15rem] flex items-center justify-center">
-        <img
+      <div className="w-[15rem] h-[15rem] flex items-center justify-center relative">
+        <Image
           src={HomyGif}
+          fill
           alt="Homy assistant"
-          className="w-full h-full object-contain select-none"
+          className="object-contain select-none"
         />
       </div>
 

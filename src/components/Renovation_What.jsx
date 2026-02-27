@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Renovationwhat from "../assets/Renovationwhat.jpg";
 import Button from "../UI/Button";
 import { useRouter } from "next/navigation";
@@ -10,10 +11,11 @@ export default function Renovation_what({ content }) {
 
       {/* LEFT IMAGE CARD */}
       <div className="w-full sm:w-[90%] lg:w-[585px] h-80 sm:h-96 md:h-[450px] lg:h-[601px] bg-[#F5F5F5] rounded-3xl sm:rounded-[45px] lg:rounded-[60px] flex items-center justify-center p-6 sm:p-8 lg:p-0 order-2 lg:order-1">
-        <div className="w-full h-full sm:w-[85%] sm:h-[85%] lg:w-[480px] lg:h-[480px] rounded-3xl sm:rounded-[40px] lg:rounded-[45px] overflow-hidden">
-          <img
+        <div className="w-full h-full sm:w-[85%] sm:h-[85%] lg:w-[480px] lg:h-[480px] rounded-3xl sm:rounded-[40px] lg:rounded-[45px] overflow-hidden relative">
+          <Image
             src={Renovationwhat}
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
             alt="Renovation Loan"
           />
         </div>
