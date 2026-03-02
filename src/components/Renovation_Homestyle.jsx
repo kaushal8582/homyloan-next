@@ -63,9 +63,9 @@ export default function Renovation_Homestyle({ content }) {
       </div>
       {/* RIGHT IMAGES */}
       <div className="relative z-10 flex gap-4 sm:gap-6 lg:gap-10 flex-shrink-0 justify-center lg:justify-start">
-        {images.map((img) => (
+        {images.map((img, index) => (
           <div
-            key={img}
+            key={index}
             onClick={() => onImageClick(img)}
             className="
               relative w-32 h-40 sm:w-40 sm:h-48 md:w-48 md:h-60 lg:w-[260px] lg:h-[340px] 
