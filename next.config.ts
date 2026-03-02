@@ -4,7 +4,7 @@ import path from "path";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['api.homyloan.com'],
+    domains: ['api.homyloan.com', 'res.cloudinary.com'],
     unoptimized: false,
     // Allow local image imports from assets
     remotePatterns: [],

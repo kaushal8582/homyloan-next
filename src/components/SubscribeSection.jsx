@@ -8,8 +8,7 @@ export default function SubscribeSection() {
   const [message, setMessage] = useState('');
   const [messageType, setMessageType] = useState(''); // 'success' or 'error'
 
-  // API base URL - use environment variable or fallback to localhost:3000
-  const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000';
+  const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
   const API_URL = `${API_BASE_URL}/api/subscription`;
 
   const handleSubmit = async (e) => {

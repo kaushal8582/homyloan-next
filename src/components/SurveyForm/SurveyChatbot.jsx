@@ -255,7 +255,7 @@ const SurveyChatbot = ({ currentStep = 1, onQuickSelect }) => {
     };
 
     try {
-      const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000';
+      const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
       const res = await axios.post(`${apiBaseUrl}/api/chat`, payload);
 
       const assistantReply = res.data.reply;
