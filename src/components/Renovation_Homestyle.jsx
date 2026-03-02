@@ -1,22 +1,34 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import girlImage from "../assets/renvotationstylegirl.jpg";
 import interiorImage from "../assets/renvotationstyle.jpg";
 import Button from "../UI/Button";
 import { useRouter } from "next/navigation";
+
 export default function Renovation_Homestyle({ content }) {
   const router = useRouter();
-  const [bgImage, setBgImage] = useState(girlImage);
-  const [images, setImages] = useState([girlImage, interiorImage]);
+  // Convert imported images to strings (handle both string and object imports)
+  const getImageSrc = (img) => {
+    if (typeof img === 'string') return img;
+    if (img?.src) return img.src;
+    if (img?.default) return img.default;
+    return img;
+  };
+  
+  const girlImageSrc = getImageSrc(girlImage);
+  const interiorImageSrc = getImageSrc(interiorImage);
+  
+  const [bgImage, setBgImage] = useState(girlImageSrc);
+  const [images, setImages] = useState([girlImageSrc, interiorImageSrc]);
 
   const onImageClick = (img) => {
-    setBgImage(img);
+    const imgSrc = getImageSrc(img);
+    setBgImage(imgSrc);
 
     setImages((prev) => {
-      if (prev[0] === img) return prev;
-      return [img, prev[0]];
+      if (prev[0] === imgSrc) return prev;
+      return [imgSrc, prev[0]];
     });
   };
 
@@ -63,24 +75,19 @@ export default function Renovation_Homestyle({ content }) {
       </div>
       {/* RIGHT IMAGES */}
       <div className="relative z-10 flex gap-4 sm:gap-6 lg:gap-10 flex-shrink-0 justify-center lg:justify-start">
-        {images.map((img, index) => (
-          <div
-            key={index}
+        {images.map((img) => (
+          <img
+            key={img}
+            src={img}
             onClick={() => onImageClick(img)}
             className="
-              relative w-32 h-40 sm:w-40 sm:h-48 md:w-48 md:h-60 lg:w-[260px] lg:h-[340px] 
-              rounded-xl sm:rounded-2xl lg:rounded-[25px] 
+              w-32 h-40 sm:w-40 sm:h-48 md:w-48 md:h-60 lg:w-[260px] lg:h-[340px] 
+              rounded-xl sm:rounded-2xl lg:rounded-[25px] object-cover 
               cursor-pointer hover:scale-105 transition-all duration-300
               shadow-[0_20px_40px_rgba(0,0,0,0.25)]
             "
-          >
-            <Image
-              src={img}
-              fill
-              className="object-cover rounded-xl sm:rounded-2xl lg:rounded-[25px]"
-              alt="Renovation Style"
-            />
-          </div>
+            alt="Renovation Style"
+          />
         ))}
       </div>
     </section>

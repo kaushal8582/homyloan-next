@@ -7,7 +7,7 @@ import Renovation_what from "@/components/Renovation_What";
 import Renovation_Homestyle from "@/components/Renovation_Homestyle";
 import Chatbot from "@/components/Chatbot";
 import FAQSection from "@/components/Frequentlyaskedquestions";
-import SubscribeSection from "@/components/SubscribeSection";
+import SubscribeSection from "@/Components/SubscribeSection";
 import Footer from "@/components/Footer";
 import { getPageContent } from "@/services/pageContentApi";
 
