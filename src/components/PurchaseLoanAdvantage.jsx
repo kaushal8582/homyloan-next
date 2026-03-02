@@ -1,6 +1,5 @@
 "use client";
 
-import Humanadvantagebg from "../assets/humanadvantagebg.svg";
 import Button from "../UI/Button";
 import { useRouter } from "next/navigation";
 import { mergeWithDefaults } from "../utils/contentMerge";
@@ -10,7 +9,7 @@ const defaultAdvantage = {
   bodyText:
     "Purchasing a home is one of life's biggest decisions. At Homy Loans, we ensure you have dedicated human support every step of the way. We believe in a human powered mortgage process, meaning you work with one caring, experienced loan officer from application to close. We are here to answer your questions, ease your worries, and make your homebuying experience as smooth as possible.",
   ctaLabel: "Get a Quote",
-  backgroundImage: Humanadvantagebg,
+  backgroundImage: "/humanadvantagebg.svg",
 };
 
 export default function PurchaseLoanAdvantage({ content }) {
