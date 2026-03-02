@@ -34,10 +34,7 @@ const PortfolioLendingWhat = ({ content }) => {
               </div>
               <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold">{conforming.title}</h3>
             </div>
-            <p className="text-sm sm:text-base text-black/70 mb-6 sm:mb-8 leading-relaxed">{conforming.description}</p>
-            <button className="bg-black text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-medium hover:bg-black/90 transition-colors flex items-center gap-2">
-              Explore More <span>→</span>
-            </button>
+            <p className="text-sm sm:text-base text-black/70 leading-relaxed">{conforming.description}</p>
           </div>
 
           <div className="bg-[#E6FF4B] text-black rounded-3xl sm:rounded-[30px] p-6 sm:p-8 lg:p-10">
@@ -48,10 +45,7 @@ const PortfolioLendingWhat = ({ content }) => {
               </div>
               <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold">{nonConforming.title}</h3>
             </div>
-            <p className="text-sm sm:text-base text-black/70 mb-6 sm:mb-8 leading-relaxed">{nonConforming.description}</p>
-            <button className="bg-black text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-medium hover:bg-black/90 transition-colors flex items-center gap-2">
-              Explore More <span>→</span>
-            </button>
+            <p className="text-sm sm:text-base text-black/70 leading-relaxed">{nonConforming.description}</p>
           </div>
         </div>
       </div>

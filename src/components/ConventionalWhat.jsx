@@ -42,14 +42,9 @@ const ConventionalWhat = ({ content }) => {
               </h3>
             </div>
 
-            <p className="text-sm sm:text-base text-black/70 mb-6 sm:mb-8 leading-relaxed">
+            <p className="text-sm sm:text-base text-black/70 leading-relaxed">
               {conforming.description}
             </p>
-
-            <button className="bg-black text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-medium hover:bg-black/90 transition-colors flex items-center gap-2">
-              Explore More
-              <span>→</span>
-            </button>
           </div>
 
           {/* Non-Conforming Loans Card */}
@@ -68,14 +63,9 @@ const ConventionalWhat = ({ content }) => {
               </h3>
             </div>
 
-            <p className="text-sm sm:text-base text-black/70 mb-6 sm:mb-8 leading-relaxed">
+            <p className="text-sm sm:text-base text-black/70 leading-relaxed">
               {nonConforming.description}
             </p>
-
-            <button className="bg-black text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-medium hover:bg-black/90 transition-colors flex items-center gap-2">
-              Explore More
-              <span>→</span>
-            </button>
           </div>
         </div>
       </div>

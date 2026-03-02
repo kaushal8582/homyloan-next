@@ -1,13 +1,12 @@
 import React from 'react'
 import Button from '../UI/Button';
-import Humanadvantagebg from "../assets/humanadvantagebg.svg";
 
 const TypesAssistance = ({ content }) => {
   return (
     <section className="w-full flex justify-center my-8 sm:my-12 lg:my-16 px-4 sm:px-6 lg:px-0">
       <div
         className="relative w-full max-w-[1290px] min-h-[600px] sm:min-h-[700px] lg:min-h-screen rounded-3xl sm:rounded-[50px] lg:rounded-[70px] overflow-hidden bg-center bg-cover bg-no-repeat flex flex-col items-center justify-center py-10 sm:py-12 lg:py-0"
-        style={{ backgroundImage: `url(${Humanadvantagebg})` }}
+        style={{ backgroundImage: `url(/humanadvantagebg.svg)` }}
       >
         <div className="absolute inset-0 bg-black/20"></div>
 
